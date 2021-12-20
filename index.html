@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="F-awesome/all.min.css">
     <link rel="stylesheet" href="F-awesome/fontawesome.min.css">
+    <link href="css/hover-min.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="css/custom.css">
 </head>
     <body>
@@ -510,9 +511,10 @@
                         <h1 class="text-white">Wide Eye is a full-service creative design</h1>
                         <p class="text-white my-5">Wide Eye is a full-service creative agency. We launch captivating<br>
                         brands that change the world.</p>
-                        <div class="btn btn-primary py-3 px-5 aos-init aos-animate rounded-pill" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <button class="btn btn-primary py-3 px-5 rounded-pill" data-aos="fade-up"
+                        data-aos-anchor-placement="center-bottom>
                             <a href="#" class="text-white h4">Get Started</a>
-                        </div>
+                        </button>
                     </div>
                     <div class="col d-none d-xl-block col-lg-4">
                         <img class="embed-responsive" src="images/banner-img-1.png" alt="">
@@ -522,6 +524,10 @@
             <div class="ba"></div>
         </div>
         <!-- end main section  -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-1.12.4.min.js"></script>
         <script src="js/custom.js"></script>
