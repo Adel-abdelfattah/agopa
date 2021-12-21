@@ -47,3 +47,13 @@ $(window).on("scroll", function(){
   }
 });
 
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
+    autoplay: true,
+    autoplayhoverpause: true,
+    autoplaytimeout: 100,
+    items: 1,
+    loop: true,
+    dots: 0
+  });
+})

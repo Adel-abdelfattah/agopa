@@ -37,8 +37,8 @@
 
 .banner .rotate-agopa {
   position: absolute;
-  left: 0px;
-  top: 60px;
+  left: -100px;
+  top: -60px;
   font-size: 130px;
   line-height: 120px;
   font-family: 'Lobster Two', "cursive";
