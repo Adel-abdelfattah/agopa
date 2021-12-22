@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i");
 .banner {
-  padding-bottom: 330px;
-  padding-top: 150px;
+  padding-bottom: 350px;
+  padding-top: 350px;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   background-size: cover;
   background-position: center;
   left: 0;
-  top: -125px;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -50,9 +50,28 @@
 }
 
 .banner img {
+  top: 0;
   position: absolute;
-  -webkit-animation: float-bob-y 10s ease infinite;
-          animation: float-bob-y 10s ease infinite;
+  -webkit-animation: move-up 2s linear  infinite both;
+          animation: move-up 2s linear  infinite both;
+}
+
+@-webkit-keyframes move-up {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
 }
 
 .sticky-header-1 {
@@ -62,6 +81,11 @@
 
 body {
   height: 1500px;
+}
+
+.main-headetr {
+  width: 100%;
+  z-index: 1;
 }
 
 .sticky-header {
@@ -123,7 +147,7 @@ a {
 }
 
 .back-ground {
-  height: 450px;
+  height: 650px;
   overflow-y: scroll;
   overflow-x: clip;
 }
@@ -176,5 +200,26 @@ a {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem white;
           box-shadow: 0 0 0 0.25rem white;
+}
+
+.image-box {
+  display: block;
+  max-width: 80%;
+  width: auto;
+  margin: 0 auto;
+  opacity: 0.4;
+  -webkit-filter: grayscale(1005);
+          filter: grayscale(1005);
+}
+
+.image-box:hover {
+  opacity: 0.8;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.carousel-p {
+  color: #B750F3;
+  font-family: 'Poppins', sans-serif;
 }
 /*# sourceMappingURL=custom.css.map */

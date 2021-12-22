@@ -49,11 +49,29 @@ $(window).on("scroll", function(){
 
 $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
-    autoplay: true,
-    autoplayhoverpause: true,
-    autoplaytimeout: 100,
-    items: 1,
-    loop: true,
-    dots: 0
+    loop:true,
+			margin:30,
+			nav:false,
+			smartSpeed: 3000,
+			autoplay: true,
+      dots: 0,
+			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				480:{
+					items:2
+				},
+				600:{
+					items:3
+				},
+				800:{
+					items:4
+				},			
+				1200:{
+					items:5
+				}
+			}
   });
 })

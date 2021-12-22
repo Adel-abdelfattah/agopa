@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i');
 
 .banner{
-    padding-bottom: 330px;
-    padding-top: 150px;
+    padding-bottom: 350px;
+    padding-top: 350px;
     position: relative;
     .ba{
         position: absolute;
@@ -12,7 +12,7 @@
         background-size: cover;
         background-position: center;
         left: 0;
-        top: -125px;
+        top: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
@@ -44,8 +44,17 @@
         animation: fa-spin 10s ease infinite;
     }
     img{
+        top:0;
         position: absolute;
-        animation: float-bob-y 10s ease infinite;
+        animation: move-up 2s linear  infinite both;
+        @keyframes move-up {
+            0%{
+                top:0;
+            }
+            50%{
+                top: -20px
+            }
+        }
     }
 }
 .sticky-header-1{
@@ -54,6 +63,10 @@
 }
 body{
     height: 1500px;
+}
+.main-headetr{
+    width: 100%;
+    z-index: 1;
 }
 .sticky-header {
     position: fixed;
@@ -107,7 +120,7 @@ a{
     text-decoration: none;
 }
 .back-ground {
-    height: 450px;
+    height: 650px;
     overflow-y: scroll;
     overflow-x: clip;
     @media only screen and (max-width: 991px){
@@ -156,4 +169,21 @@ a{
     box-shadow: 0 0 0 0.25rem white;
     }
     
+}
+
+.image-box {
+    display: block;
+    max-width: 80%;
+    width: auto;
+    margin: 0 auto;
+    opacity: 0.4;
+    filter: grayscale(1005);
+    &:hover{
+        opacity: 0.8;
+        filter: grayscale(50%);
+    }
+}
+.carousel-p{
+    color: #B750F3;
+    font-family: 'Poppins', sans-serif;
 }
