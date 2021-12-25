@@ -342,40 +342,52 @@ a{
 }
 // end motivation section 
 
-
 // strat video section 
-
 .video-section{
-    a{
-        animation: pulse 3s infinite;
-        @keyframes pulse {
-            0% {
-              -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
+    a {
+        display: inline-block;
+        position: relative;
+        
+        &::before{
+            content: '';
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: skyblue;
+            z-index: -1;
+            position: absolute;
+            ;
+            animation: pulse 3s infinite;
+            @keyframes pulse {
+                0% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1) ;
+                }
+            
+                50% {
+                -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
+                }
+            
+                100% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+                }
             }
-          
-            50% {
-              -webkit-transform: scale3d(1.05, 1.05, 1.05);
-              transform: scale3d(1.05, 1.05, 1.05);
-            }
-          
-            100% {
-              -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-            }
-        }
+        }    
     }
     span{
         color: #d858f5;
     }
 }
+// end video section
 
-  
-// end video section 
 // start Creative Design section 
 .Creative-Design{
     padding-bottom: 350px;
-    padding-top: 350px;
+    padding-top: 250px;
     position: relative;
     .ba{
         position: absolute;
@@ -429,3 +441,49 @@ a{
     }
 }
 // end Creative Design section 
+
+// star agency section 
+.agency{
+    &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 60px;
+        height: 250px;
+        background-image: url("../images/images/icons/agency-icon-1.png");
+        top: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 71px;
+        height: 250px;
+        background-image: url("../images/images/icons/agency-icon-2.png");
+        top: 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    pre, p{
+        font-family: 'Muli', sans-serif;
+        line-height: 28px;
+        color: #6e6773;
+        font-size: 20px;
+    }
+    .business{
+        
+        margin-bottom: 200px;
+        .business-time{
+            img{
+                @media only screen and (min-width: 992px){
+                    position: absolute;
+                    right: 0;
+                    top: -200px;
+                } 
+            }
+        }
+    }
+}
+// end agency section 

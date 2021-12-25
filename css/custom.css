@@ -411,37 +411,51 @@ a {
 }
 
 .video-section a {
+  display: inline-block;
+  position: relative;
+}
+
+.video-section a::before {
+  content: '';
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: skyblue;
+  z-index: -1;
+  position: absolute;
   -webkit-animation: pulse 3s infinite;
           animation: pulse 3s infinite;
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 
@@ -451,7 +465,7 @@ a {
 
 .Creative-Design {
   padding-bottom: 350px;
-  padding-top: 350px;
+  padding-top: 250px;
   position: relative;
 }
 
@@ -508,6 +522,49 @@ a {
 @media only screen and (max-width: 992px) {
   .Creative-Design img {
     width: 100%;
+  }
+}
+
+.agency::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 250px;
+  background-image: url("../images/images/icons/agency-icon-1.png");
+  top: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.agency::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 71px;
+  height: 250px;
+  background-image: url("../images/images/icons/agency-icon-2.png");
+  top: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.agency pre, .agency p {
+  font-family: 'Muli', sans-serif;
+  line-height: 28px;
+  color: #6e6773;
+  font-size: 20px;
+}
+
+.agency .business {
+  margin-bottom: 200px;
+}
+
+@media only screen and (min-width: 992px) {
+  .agency .business .business-time img {
+    position: absolute;
+    right: 0;
+    top: -200px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
