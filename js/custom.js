@@ -76,4 +76,32 @@ $(document).ready(function() {
   });
 })
 
+if ($('.about-carousel').length) {
+  $('.about-carousel').owlCarousel({
+    loop:true,
+    margin:6,
+    nav:true,
+    dots: 0,
+    smartSpeed: 3000,
+    autoplay: true,
+    navText: [ '<span class="fa fa-caret-left"></span>', '<span class="fa fa-caret-right"></span>' ],
+    responsive:{
+      0:{
+        items:1
+      },
+      480:{
+        items:1
+      },
+      600:{
+        items:1
+      },
+      800:{
+        items:1
+      },			
+      1200:{
+        items:1
+      }
 
+    }
+  });    		
+}
